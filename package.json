@@ -22,14 +22,11 @@
     "mrm-preset"
   ],
   "dependencies": {
-    "chalk": "^5.2.0",
+    "chalk": "^4.1.2",
     "debug": "^4.3.4",
     "husky": "^8.0.2",
-    "inquirer": "^9.1.4",
+    "inquirer": "^8.2.5",
     "mrm-core": "^7.1.13",
-    "mrm-task-gitignore": "^4.1.13",
-    "mrm-task-lint-staged": "^7.1.13",
-    "mrm-task-readme": "^4.1.13",
     "mrm-task-semantic-release": "^6.1.13",
     "parse-author": "^2.0.0"
   }
