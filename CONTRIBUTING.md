@@ -1,6 +1,10 @@
 
 # Contributing
 
+Thank you for looking for ways to contribute.
+
+This project is not accepting outside contribution at this time. If you have a bug report or feature request, you may still open an issue.
+
 ## Testing locally
 
 Clone the repo and spin up a new project that links to it:
@@ -23,3 +27,24 @@ cd test-project
 npx mrm editorconfig --preset osuresearch
 ```
 
+## Conventional commits
+
+This project follows [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) guidelines.
+
+Here's a few suggestions for common commit messages:
+
+```
+feat: add blah task
+```
+
+```
+feat(jest): add config for blah
+```
+
+```
+docs(contributing): update pull request policy
+```
+
+```
+fix(readme): fallback to blah if no author is specified
+```
