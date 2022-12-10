@@ -1,0 +1,47 @@
+# Contributing
+
+We love pull requests. And following this guidelines will make your pull request easier to merge
+
+## Prerequisites
+
+- Install [EditorConfig](http://editorconfig.org/) plugin for your code editor to make sure it uses correct settings.
+- Fork the repository and clone your fork.
+- Install dependencies: `npm install`.
+
+## Coding style
+
+We make use of Typescript along with [ESLint](https://eslint.org) to ensure a consistent coding style. All of the rules are defined inside the `.eslintrc.json` file.
+
+## Development workflow
+
+Always make sure to lint and test your code before pushing it to the GitHub.
+
+```bash
+npm test
+```
+
+Or to just lint:
+
+```bash
+npm run lint
+```
+
+**Make sure you add sufficient tests for the change**.
+
+
+## Other notes
+
+- Do not change version number inside the `package.json` file.
+- Do not update `CHANGELOG.md` file.
+- Do not update `.eslintrc.json` file. If something prevents you writing code, please create an issue for same.
+
+
+## Report security issues
+
+All of the security issues, must be reported via [email](mailto:{securityEmail}) and not using any of the public channels.
+
+
+## Need help?
+
+Feel free to ask.
+
