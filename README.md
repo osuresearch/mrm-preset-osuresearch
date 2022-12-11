@@ -1,7 +1,41 @@
 
-# OSU Research Mrm Preset
+# 🧰 OSU Research Mrm Preset
 
-The OSU Research preset for [mrm](https://github.com/sapegin/mrm) keeps project configuration files in-sync and policies compliant across projects.
+The OSU Research preset for [Mrm](https://mrm.js.org/) adds a suite of tasks to keep project configuration files in-sync and policies compliant across university projects.
+
+
+## Getting Started
+
+All tasks are available under the `osuresearch` preset.
+
+For full project scaffolding, we have a few aliased variations available that will walk you through the setup process.
+
+### Create a React Components Package
+
+Full details are available in the [react-package task](./react-package/README.md).
+
+```bash
+npx mrm react-package --preset osuresearch
+```
+
+### 🤔 TODO: More!
+
+
+## Tasks
+
+Each task is isolated into its own directory with a `README.md` to describe what codemods the task performs.
+
+Some tasks may support additional configurations.
+
+For example, if you want to replace the contribution contacts, you can pass those into the preset task:
+
+```bash
+npx mrm contributing
+  --preset osuresearch
+  --config:securityContact "security@osu.edu"
+  --config:conductContact "conduct@osu.edu"
+```
+
 
 ## Policies and Procedures
 
@@ -16,22 +50,3 @@ For folks who like to focus on policy review, the generated policies are:
 * [MIT License](https://en.wikipedia.org/wiki/MIT_License)
 
 For further questions regarding policies and procedures, contact Chase [mcmanning.1@osu.edu](mailto:mcmanning.1@osu.edu).
-
-## Getting Started
-
-All tasks are available under the `osuresearch` preset.
-
-For example, if you just want to update the contribution policies for a project, run:
-
-```bash
-npx mrm contributing --preset osuresearch
-```
-
-For full project scaffolding, we have a few aliased variations available:
-
-🤔 TODO!
-
-## Tasks
-
-Each task is isolated into its own directory with a `README.md` to describe what codemods the task performs.
-
