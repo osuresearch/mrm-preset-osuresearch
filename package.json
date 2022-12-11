@@ -27,6 +27,7 @@
     "husky": "^8.0.2",
     "inquirer": "^8.2.5",
     "mrm-core": "^7.1.13",
+    "mrm-task-license": "^5.1.13",
     "mrm-task-semantic-release": "^6.1.13",
     "parse-author": "^2.0.0"
   }

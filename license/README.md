@@ -1,0 +1,4 @@
+
+# license
+
+Adds MIT license
