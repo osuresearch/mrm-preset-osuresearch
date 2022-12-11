@@ -52,6 +52,10 @@ function task() {
   template('src/components/Button/Button.stories.tsx', join(__dirname, 'templates', 'Button.stories.tsx'))
     .apply({})
     .save();
+
+  template('src/components/Button/Button.test.tsx', join(__dirname, 'templates', 'Button.test.tsx'))
+    .apply({})
+    .save();
 }
 
 task.description = 'Adds Storybook for React';
