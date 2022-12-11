@@ -1,40 +1,20 @@
 {
   "aliases": {
-    "setup": ["init", "policies", "all"],
     "policies": [
       "contributing",
+      "conventional-commits",
       "editorconfig",
       "github",
       "gitignore",
       "license",
       "readme"
     ],
-    "npm-package": [
+    "react-package": [
+      "init",
+      "react",
       "policies",
-      "conventional-commits",
       "jest",
       "lint",
-      "semantic-release"
-    ],
-    "react": [
-      "react-package",
-      "policies",
-      "conventional-commits",
-      "jest",
-      "lint",
-      "semantic-release",
-      "storybook"
-    ],
-    "all": [
-      "contributing",
-      "conventional-commits",
-      "editorconfig",
-      "github",
-      "gitignore",
-      "jest",
-      "license",
-      "lint",
-      "readme",
       "semantic-release",
       "storybook"
     ]

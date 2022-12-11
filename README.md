@@ -12,10 +12,23 @@ For full project scaffolding, we have a few aliased variations available that wi
 
 ### Create a React Components Package
 
-Full details are available in the [react-package task](./react-package/README.md).
-
 ```bash
 npx mrm react-package --preset osuresearch
+```
+
+Batteries included:
+
+* React 18 with TypeScript
+* Jest with a jsdom environment
+* ESLint and Prettier for code linting
+* Bundling for `esm`, `cjs` + `umd`
+* Conventional commits for Semantic Release GitHub Action
+* Standard GitHub issue workflows and contribution guidelines
+
+Once configured, you can boot up Storybook and start developing components
+
+```
+npm run storybook
 ```
 
 ### 🤔 TODO: More!

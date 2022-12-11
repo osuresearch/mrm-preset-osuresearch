@@ -1,2 +1,2 @@
 
-Interactive walkthrough for setting up a new project
+Interactive walkthrough for setting common configurations
