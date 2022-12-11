@@ -5,20 +5,27 @@ const packageRepoUrl = require('package-repo-url');
 const parseAuthor = require('parse-author');
 const { packageJson, install, json, template } = require('mrm-core');
 const debug = require('debug')('osuresearch:mrm-readme');
+const mergeConfigs = require('../utils/mergeConfigs');
 
 function getAuthorName(pkg) {
-	const rawName = pkg.get('author.name') || pkg.get('author') || '';
-	return parseAuthor(rawName).name;
+	const raw = pkg.get('author.name') || pkg.get('author') || '';
+	return parseAuthor(raw).name;
 }
 
+function getAuthorUrl(pkg) {
+	const raw = pkg.get('author.url') || pkg.get('author.email') || pkg.get('author') || '';
+	return parseAuthor(raw).url;
+}
 
-function task({ package, authorName, authorUrl }) {
+function task(config) {
+  const { package, authorName, authorUrl } = mergeConfigs(config);
+
   template('README.md', join(__dirname, 'templates', 'readme.md'))
     .apply({
 			package,
 			authorName,
 			authorUrl,
-			github: packageRepoUrl(),
+			repo: packageRepoUrl(),
 		})
     .save();
 }
@@ -44,7 +51,7 @@ task.parameters = {
 	authorUrl: {
 		type: 'input',
 		message: 'Enter author site URL',
-		default: meta.url,
+		default: () => getAuthorUrl(packageJson()) || meta.name,
 		validate(value) {
 			return value ? true : 'Author URL is required';
 		},
