@@ -8,11 +8,6 @@ function task() {
   json('.eslintrc.json').delete();
   lines('.eslintignore').delete();
 
-  const ignore = [
-    'build',
-    'node_modules',
-  ];
-
   const prettierConfig = {
     'arrayParens': 'always',
     'arrowParens': 'always',
@@ -25,10 +20,6 @@ function task() {
     'tabWidth': 2,
     'trailingComma': 'none',
     'useTabs': false
-  };
-
-  const eslintConfig = {
-    extends: 'something'
   };
 
   // Install required dependencies

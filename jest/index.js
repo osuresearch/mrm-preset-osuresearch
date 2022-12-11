@@ -2,9 +2,7 @@
 const {
   lines,
   packageJson,
-  template,
   install,
-  uninstall,
 } = require('mrm-core');
 
 function task() {
