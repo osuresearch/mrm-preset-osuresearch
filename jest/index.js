@@ -4,10 +4,9 @@ const {
   packageJson,
   install,
 } = require('mrm-core');
+const debug = require('debug')('osuresearch:mrm-jest');
 
 function task() {
-  const pkg = packageJson();
-
   // Install dependencies
   const dependencies = [
     'jest',
@@ -16,7 +15,8 @@ function task() {
   ];
 
   // Add testing dependencies for React
-  const hasReact = pkg.get('dependencies.react');
+  const pkg = packageJson();
+  const hasReact = pkg.get('dependencies.react') || pkg.get('devDependencies.react');
   if (hasReact) {
     dependencies.push(
       '@testing-library/jest-dom',
@@ -26,6 +26,8 @@ function task() {
     );
   }
 
+  debug('installing dependencies %o', dependencies);
+
   install(dependencies, { dev: true });
 
   // Ignore test coverage files
@@ -34,15 +36,17 @@ function task() {
     .save();
 
   // Update package.json
-  pkg
+  packageJson()
     .merge({
       jest: {
+        preset: 'ts-jest',
+        testEnvironment: 'jest-environment-jsdom',
         testPathIgnorePatterns: ['/node_modules/', '<rootDir>/lib/'],
         transform: {
           '^.+\\.tsx?$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
         },
-        testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-        moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+        testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|tsx?)$',
+        moduleFileExtensions: ['ts', 'tsx', 'json'],
       },
     })
     .appendScript('test', 'jest')
