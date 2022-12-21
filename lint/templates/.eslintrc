@@ -4,6 +4,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:mdx/recommended",
     "plugin:import/errors",
     "plugin:import/typescript",
     "prettier"
@@ -20,9 +21,13 @@
   },
   "settings": {
     "react": {
-      "version": "18"
+      "version": "detect"
     }
   },
+  "ignorePatterns": [
+    "/node_modules",
+    "/dist"
+  ],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/camelcase": "off",
@@ -77,6 +82,6 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 10
+    "ecmaVersion": 12
   }
 }
