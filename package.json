@@ -1,26 +1,37 @@
 {
   "name": "mrm-preset-osuresearch",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": false,
   "description": "Common tasks for Mrm",
+  "keywords": [
+    "mrm",
+    "mrm-preset",
+    "ohio-state-university"
+  ],
+  "homepage": "https://github.com/osuresearch/mrm-preset-osuresearch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osuresearch/mrm-preset-osuresearch"
+  },
+  "bugs": {
+    "url": "https://github.com/osuresearch/mrm-preset-osuresearch/issues"
+  },
   "author": {
     "name": "Chase McManning",
     "url": "https://github.com/McManning"
-  },
-  "homepage": "https://github.com/osuresearch/mrm-preset-osuresearch",
-  "repository": "osuresearch/mrm-preset-osuresearch",
-  "license": "MIT",
-  "engines": {
-    "node": ">=4"
   },
   "main": "config.json",
   "files": [
     "config.json",
     "*/index.js"
   ],
-  "keywords": [
-    "mrm",
-    "mrm-preset"
-  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "debug": "^4.3.4",
