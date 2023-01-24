@@ -22,10 +22,6 @@
     "url": "https://github.com/McManning"
   },
   "main": "config.json",
-  "files": [
-    "config.json",
-    "*/index.js"
-  ],
   "engines": {
     "node": ">=4"
   },
